@@ -1,0 +1,28 @@
+#---------
+# mmseqs 
+#---------
+
+wget -q https://mmseqs.com/latest/mmseqs-linux-avx2.tar.gz
+tar xzf mmseqs-linux-avx2.tar.gz
+rm -f mmseqs-linux-avx2.tar.gz
+#-- the executable is installed at below directory --#
+mmseqs/bin
+
+
+#-------------
+# NR database
+#-------------
+
+wget -q ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nr.gz
+
+
+#------------------
+# running example:
+#------------------
+
+./make_nrdata.sh -i example/nr_test
+
+
+#[note]:
+requires ~500G hard disk space !!
+
